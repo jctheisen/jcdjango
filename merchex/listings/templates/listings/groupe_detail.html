@@ -4,13 +4,13 @@
 
 {% block content %}
 
-<h2>{{groupe.nom}}</h2>
+<h2>{{xgroupe.nom}}</h2>
 <ul>
-	<li> annee creation : {{groupe.anne_crea}}</li>
-	<li> genre : {{groupe.genre}}</li>
-	<li> adresse du site : {{groupe.add_site}}</li>
+	<li> annee creation : {{xgroupe.annee_crea}}</li>
+	<li> genre : {{xgroupe.get_genre_display}}---{{xgroupe.genre}}</li>
+	<li> adresse du site : {{xgroupe.add_site}}</li>
 </ul>
-<p>{{groupe.biographie}}</p>
+<p>{{xgroupe.biographie}}</p>
 <a href="{% url 'groupes-liste' %}">retour liste groupes</a>
 
 {% endblock %}
