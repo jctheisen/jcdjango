@@ -1,0 +1,16 @@
+﻿#listings/templates/listings/groupe_detail.html
+
+{% extends 'listings/base.html' %}
+
+{% block content %}
+
+<h2>{{groupe.nom}}</h2>
+<ul>
+	<li> annee creation : {{groupe.anne_crea}}</li>
+	<li> genre : {{groupe.genre}}</li>
+	<li> adresse du site : {{groupe.add_site}}</li>
+</ul>
+<p>{{groupe.biographie}}</p>
+<a href="{% url 'groupes-liste' %}">retour liste groupes</a>
+
+{% endblock %}

@@ -1,0 +1,17 @@
+# listings/templates/listings/base.html
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+    <head><title>Merchex</title></head>
+
+    <body>
+        <nav>
+            <a href="{% url 'groupes-liste' %}">Groupes liste</a>
+            
+            <a href="{% url 'contact-formul' %}">Contact</a>
+        </nav>
+        {% block content %}{% endblock %}
+
+    </body>
+</html>

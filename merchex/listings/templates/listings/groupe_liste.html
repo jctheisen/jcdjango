@@ -1,0 +1,14 @@
+#listings/templates/listings/groupe_liste.html
+
+{% extends 'listings/base.html' %}
+
+{% block content %}
+<p>
+    Liste des groupes enregistres
+    <ul>
+        {% for xgroupe in igroupe %}
+            <li><a href="{% url 'groupe-detail' xgroupe.id %}">{{ xgroupe.nom }}</a></li>
+        {% endfor %}
+    </ul>
+</p>
+{% endblock %}
